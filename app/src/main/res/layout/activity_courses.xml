@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CoursesActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/textTitlePageCW"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:backgroundTint="#718AC2"
+        android:textAlignment="center"
+        app:cardCornerRadius="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textTitlePage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="CourseFinder"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btmMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#718BC3"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_menu" />
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        android:id="@+id/sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:backgroundTint="#00FFFFFF"
+        android:gravity="bottom"
+        app:layout_constraintBottom_toTopOf="@+id/btmMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTitlePageCW"
+        app:umanoPanelHeight="40dp"
+        app:umanoShadowHeight="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/resultedTitleCW"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:backgroundTint="#70718AC2"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/resultedTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="Top Rated Courses:"
+                    android:textSize="17dp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/resultedTitleCW">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <Button
+                android:id="@+id/searchOpenBtn"
+                android:layout_width="42dp"
+                android:layout_height="66dp"
+                android:background="#00FFFFFF"
+                android:backgroundTint="#00FFFFFF"
+                android:elevation="0dp"
+                app:icon="@drawable/ic_baseline_search"
+                app:iconGravity="top"
+                app:iconSize="50dp"
+                app:iconTint="#718BC3"
+                app:layout_constraintBottom_toBottomOf="@+id/rcView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.988"
+                app:layout_constraintStart_toStartOf="@+id/rcView"
+                app:layout_constraintTop_toTopOf="@+id/rcView"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/removeFiltersBtn"
+                android:layout_width="42dp"
+                android:layout_height="66dp"
+                android:background="#00FFFFFF"
+                android:backgroundTint="#00FFFFFF"
+                android:elevation="0dp"
+                android:visibility="gone"
+                app:icon="@drawable/ic_baseline_cancel"
+                app:iconGravity="top"
+                app:iconSize="50dp"
+                app:iconTint="#718BC3"
+                app:layout_constraintBottom_toBottomOf="@+id/rcView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.989"
+                app:layout_constraintStart_toStartOf="@+id/rcView"
+                app:layout_constraintTop_toTopOf="@+id/rcView"
+                app:layout_constraintVertical_bias="0.11" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/topContainerCW"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="55dp"
+                android:layout_marginRight="10dp"
+                android:visibility="gone"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:id="@+id/searchCloseBtn"
+                    android:layout_width="43dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#00FFFFFF"
+                    android:backgroundTint="#00FFFFFF"
+                    android:elevation="0dp"
+                    app:icon="@drawable/ic_baseline_keyboard_double_arrow_right"
+                    app:iconGravity="top"
+                    app:iconSize="35dp"
+                    app:iconTint="#718BC3"
+                    app:layout_constraintBottom_toBottomOf="@+id/rcView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.989"
+                    app:layout_constraintStart_toStartOf="@+id/rcView"
+                    app:layout_constraintTop_toTopOf="@+id/rcView"
+                    app:layout_constraintVertical_bias="0.08" />
+
+                <LinearLayout
+                    android:id="@+id/topContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/searchCourseInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="textPersonName" />
+
+                    <Spinner
+                        android:id="@+id/spinner3"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:scrollbarSize="4dp" />
+
+                    <Button
+                        android:id="@+id/searchBtn"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        app:icon="?android:attr/actionModeWebSearchDrawable"
+                        app:iconGravity="top" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/showCourseInfo"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            app:cardElevation="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/rcView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/dragThing"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#61718BC3"
+                android:gravity="center"
+                android:text="|||||||||||||||||||||||||||||||||||||"
+                android:textColor="#718BC3"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ScrollView
+                android:id="@+id/scrViewCourse"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="40dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="170dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        app:cardCornerRadius="30dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="150dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center|left"
+                                android:layout_margin="5dp"
+                                app:cardCornerRadius="30dp">
+
+                                <ImageView
+                                    android:id="@+id/openedCourseImg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    tools:srcCompat="@tools:sample/avatars" />
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/openedCourseTitle"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="TextView"
+                                        android:textColor="#000000"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/openedCourseAuthor"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="TextView"
+                                        android:textSize="14sp"
+                                        android:textStyle="italic" />
+
+                                    <TextView
+                                        android:id="@+id/openedCourseBought"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:gravity="center"
+                                        android:text="1000+ purchases" />
+
+                                    <Button
+                                        android:id="@+id/button"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="30dp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginRight="30dp"
+                                        android:text="Buy" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/separator"
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layout_marginLeft="100dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginRight="100dp"
+                        android:layout_marginBottom="10dp"
+                        android:backgroundTint="#C8D2E7"
+                        app:cardCornerRadius="10dp" />
+
+                    <TextView
+                        android:id="@+id/openedCourseDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="15dp"
+                        android:text="TextView"
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+            </ScrollView>
+        </androidx.cardview.widget.CardView>
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

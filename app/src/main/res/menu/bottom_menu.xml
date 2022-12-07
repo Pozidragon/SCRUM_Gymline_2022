@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item  android:id="@+id/profile_item"
+        android:icon="@drawable/ic_profilee" android:title="Profile"
+        android:orderInCategory="1"/>
+    <item  android:id="@+id/logout"
+        android:icon="@drawable/ic_baseline_logout" android:title="Logout"
+        android:orderInCategory="3"/>
+    <item  android:id="@+id/courses"
+        android:icon="@drawable/ic_baseline_manage_search" android:title="Courses"
+        android:orderInCategory="2"/>
+
+
+</menu>
