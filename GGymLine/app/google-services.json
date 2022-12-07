@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "367864173940",
+    "firebase_url": "https://gymline-33603-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "gymline-33603",
+    "storage_bucket": "gymline-33603.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:367864173940:android:4d66bfebbbc048c4bb8821",
+        "android_client_info": {
+          "package_name": "com.panchenko.gymline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "367864173940-kklng1htic3cojq2jef5iueivjegvijh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.panchenko.gymline",
+            "certificate_hash": "add488a767017f48afd2ab68599910f5e7724745"
+          }
+        },
+        {
+          "client_id": "367864173940-o8mtu4qhbrmjheb5f1chedlao2e8jcs0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCn7upDm4gxf6o3d0ZZWpOyu8HvLWB4HrA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "367864173940-o8mtu4qhbrmjheb5f1chedlao2e8jcs0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
